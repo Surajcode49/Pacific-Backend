@@ -4,7 +4,7 @@ const app = express();
 const cors = require("cors");
 require("./db/conn");
 const router = require("./Routes/router");
-const PORT = 4500;
+const PORT = "https://pacific-login2.onrender.com";
 
 
 
@@ -14,7 +14,7 @@ app.use(cors());
 app.use(router);
 
 app.get("/",(req,res)=>{
-    res.status(200).json("Sab theek hai   bhai ? ");
+    res.status(200).json("Server run hoo raha hai bhai , cazzzz! ");
 })
 
 
