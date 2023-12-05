@@ -62,6 +62,9 @@ userSchema.methods.generateAuthtoken = async function(){
 }
 
 
+
+
+
 // creating model
 const users = new mongoose.model("Suraj", userSchema);
 
