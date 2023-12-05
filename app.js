@@ -4,8 +4,7 @@ const app = express();
 const cors = require("cors");
 require("./db/conn");
 const router = require("./Routes/router");
-// const PORT = "https://pacific-login2.onrender.com";
-const PORT = 5000;
+const PORT = "https://pacific-login3.onrender.com/";
 
 // middleware
 app.use(express.json());
