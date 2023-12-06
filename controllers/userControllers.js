@@ -144,7 +144,8 @@ exports.userLogin = async (req, res) => {
 // get user info from the token
 exports.getUserInfoFromToken = async (req, res) => {
   try {
-    const SECRECT_KEY = "SURAJ123456";
+
+    const SECRECT_KEY = "Surajprasad";
 
     const token = req.headers.authorization.split(" ")[1];
     if (!token) throw new Error("Token not found");
