@@ -142,20 +142,20 @@ exports.userLogin = async (req, res) => {
 };
 
 // get user info from the token
-
 exports.getUserInfoFromToken = async (req, res) => {
   try {
-    const SECRECT_KEY = "Surajprasad";
+    const SECRECT_KEY = process.env.JWT_SECRET;
+
     const token = req.headers.authorization.split(" ")[1];
-    if (!token) throw new Error("Toke not found");
+    if (!token) throw new Error("Token not found");
     const { _id } = jwt.verify(token, SECRECT_KEY);
     if (!_id) throw new Error("id is not found");
-    // console.log(_id);
+    console.log(_id);
     const user = await users.findOne({ _id: _id });
 
     if (!user) throw new Error("User not found");
     res.status(200).json({
-      message: "get user info successfully",
+      message: "Get user info successfully",
       name: user.fname,
     });
   } catch (error) {
